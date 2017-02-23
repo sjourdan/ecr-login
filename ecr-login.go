@@ -30,7 +30,7 @@ func check(e error) {
 }
 
 // DefaultTemplate prints docker login command
-const DefaultTemplate = `{{range .}}docker login -u {{.User}} -p {{.Pass}} -e none {{.ProxyEndpoint}}
+const DefaultTemplate = `{{range .}}docker login -u {{.User}} -p {{.Pass}} {{.ProxyEndpoint}}
 {{end}}`
 
 // load template from file or use default
